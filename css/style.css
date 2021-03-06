@@ -1,0 +1,205 @@
+      @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Spartan', sans-serif;        
+      }
+      
+      body{
+        font-size: 15px;
+        max-width: 1440px;
+        height: 100vh;
+        background: url("images/bg-pattern-bottom-desktop.svg") no-repeat right bottom, url("images/bg-pattern-top-desktop.svg") no-repeat left top;
+        align-items: center;
+      }
+
+      /*LINHA 01*/
+      #row-1{
+        width: 100%;
+        height: 50vh;        
+      }
+
+      .columns-row-1{
+        width: 50%;
+      }
+
+      #column-1-row-1{
+        height: 100%;
+        float: left;
+        display: flex;
+        flex-direction: column;
+        padding-top: 133px;
+        padding-left: 150px;        
+      }
+
+      #column-1-row-1 h1, #column-1-row-1 p{
+        color: white;
+        display: flex;        
+        align-items: center;
+      }
+
+      #column-1-row-1 h1{
+        width: 450px;
+        font-size: 45px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: hsl(300, 43%, 22%);
+      }
+
+      #column-1-row-1 p{
+        width: 450px;
+        font-weight: 400;
+        color: hsl(303, 10%, 53%) 
+      }
+
+      #column-2-row-1{
+        height: 100%;
+        float: right;
+        display: flex;
+        flex-direction: column;
+        align-items: center;            
+      }
+
+      .rated{
+        width: 400px;
+        height: 50px;        
+        margin-top: 20px;        
+        margin-right: 315px;
+        border-radius: 10px;
+        background-color: hsl(300, 24%, 96%)
+      }
+
+      .rated p{
+        margin-top: 20px;
+        margin-left: 20px;
+        font-size: 13px;
+        font-weight: 700;
+        color: hsl(300, 43%, 22%);
+      }
+
+      .star{
+        vertical-align: text-bottom;        
+      }
+
+      .star1{
+        padding-left: 20px;
+      }
+
+      .star5{
+          margin-right: 20px;
+      }
+
+      #rated-1{
+        margin-top: 140px;
+      }
+
+      #rated-2{
+        margin-left: 100px;
+      }
+
+      #rated-3{
+        margin-left: 200px;
+      }
+
+      /*LINHA 02*/
+      #row-2{
+        width: 100%;
+        height: 50vh;
+      }
+
+      .columns-row-2{
+        width: 33.33%;
+        height: calc(100% - 52px);
+        float: left;
+        margin-top: 50px;        
+      }
+
+      #column-2-row-2{
+        width: calc(330px + 50px);
+      }
+
+      .card{
+        width: 350px;
+        height: 200px;               
+        border-radius: 7px;
+        text-align: center;
+        background-color: hsl(300, 43%, 22%);
+      }
+
+      @keyframes effectCard {
+        0%   {background-color: #873b87;}        
+        50% {background-color: hsl(300, 43%, 22%);}
+        100%    {background-color: #873b87;}
+      }
+
+      .card:hover{
+          animation: effectCard 3s infinite;
+      }
+
+      .card p{
+        width: 270px;
+        line-height: 20px;
+        text-align: left;       
+        font-size: 12px;
+        margin: 0 auto;
+        color: hsl(300, 24%, 96%);        
+      }
+
+      #card-1{
+        float: right;
+      }      
+
+      #card-2{
+        margin-top: 20px;
+        margin-left: 25px;       
+      }
+      
+      #card-3{
+        margin-top: 40px;
+        margin-left: -70px;
+      }
+
+      .profile{
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        margin-left: 40px;
+        margin-top: 40px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;        
+      }
+
+      #profile-1{
+        background-image: url("../images/image-colton.jpg");        
+      }
+
+      #profile-2{
+        background-image: url("../images/image-irene.jpg");        
+      }
+
+      #profile-3{
+        background-image: url("../images/image-anne.jpg");        
+      }
+
+      .title{
+        margin-left: -200px;
+      }
+
+      .sub{
+        margin-left: -210px;
+        font-weight: 400;
+        color: hsl(333, 80%, 67%);
+      }
+      
+      .attribution {
+        width: 100%;
+        position: absolute;
+        margin-top: 330px;
+        font-size: 11px;
+        text-align: center;        
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
