@@ -3,19 +3,17 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box;  
   font-family: 'Spartan', sans-serif;
 }
 
 body {
-  width: 100%;
-  height: 100vh;
+  max-width: 100%;
+  height: 100%;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 20px;
 
+  
   background-image: url(../images/bg-pattern-top-desktop.svg),
               url(../images/bg-pattern-bottom-desktop.svg);
   background-repeat: no-repeat, no-repeat;
@@ -23,17 +21,173 @@ body {
   background-size: 45%, 75%;            
 }
 
-/* >>> FIRST PART <<< */
+body section:nth-child(1){
+  width: 100%;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  grid-template-areas: "cs11 cs12";
+}
 
+.cs11{
+  width: 100%;
+  height: 50vh;
+
+  grid-area: cs11;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cs11 > *{
+  width: 350px;
+  
+}
+
+.cs11 h1{
+  font-size: 45px;
+  font-weight: 700;
+  color: hsl(300, 43%, 22%);
+
+  padding: 5px 0;
+}
+
+.cs12{
+  width: 100%;
+  grid-area: cs12;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cs12 > div:nth-child(2){
+  margin-left: 40px;
+}
+
+.cs12 > div:nth-child(3){
+  margin-left: 80px;
+}
+
+.cs12 > div > p{
+  width: 420px;
+  font-size: 16px;
+  font-weight: 400;
+
+  margin: 10px 0;
+  padding: 18px;
+  padding-left: 25px;
+
+  border-radius: 12px;
+  background-color: hsl(300, 24%, 96%);
+}
+
+body section:nth-child(2){
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+section:nth-child(2) container{
+  width: 33.333%;
+  max-width: 350px;
+  max-height: 250px;
+
+  background-color: hsl(300, 43%, 22%);
+  border-radius: 10px;
+}
+
+.cs2{
+  display: grid;
+  grid-template-columns: 20% 1fr 20% 20%;
+  grid-template-rows: 10% 20% 20% 50%;
+  grid-template-areas: ". . . ."
+                        "profile name . ."
+                        "profile checked . ."
+                        "desc desc desc desc";
+  gap: 5px;
+}
+
+div.profile{
+  width: 50px;
+  height: 50px;
+
+  margin: 40px;
+
+  border-radius: 50%;
+
+  grid-area: profile;
+  align-self: center;
+}
+
+#profile-1{
+  background-image: url(../images/image-colton.jpg);
+  background-size: cover;
+}
+
+#profile-2{
+  background-image: url(../images/image-irene.jpg);
+  background-size: cover;
+}
+
+#profile-3{
+  background-image: url(../images/image-anne.jpg);
+  background-size: cover;
+}
+
+.name{
+  width: 100%;
+  color: white;
+  grid-area: name;
+  justify-self: start;
+  align-self: flex-end;
+  margin-left: 25px;
+}
+
+.checked{
+  color: hsl(333, 80%, 67%);
+  font-weight: lighter;
+
+  grid-area: checked;
+  margin-left: 25px;
+}
+
+  .cs2 p{
+    width: 80%;
+
+  font-size: 14px;
+  margin: 0 auto;
+
+  color: white;
+  font-weight: lighter;
+
+  grid-area: desc;
+  }
+  
+
+
+
+
+
+
+/* >>> FIRST PART <<< */
+/*
 section{
   width: 100%;
   height: 50%;
 
   display: flex;
+  flex-wrap: wrap;
 }
 
 container.container-section-01{
   width: 50%;
+  min-width: 650px;
   height: 100%;
   
   display: flex;
@@ -45,6 +199,7 @@ container.container-section-01{
 
 container.container-section-01 div{
   width: 25%;
+  min-width: 450px;
 
   position: absolute;
   left: 20.2%;
@@ -65,7 +220,8 @@ div p {
   padding: 5px 0;
 }
 
-container.container-section-01 > p{
+
+container.container-section-01 > div {
   width: 450px;
 
   margin: 10px 0;
@@ -81,10 +237,10 @@ container.container-section-01 > p:nth-child(2){
 
 container.container-section-01 > p:nth-child(3){
   margin-left: 100px;
-}
+}*/
 
 /*>>> SECOUND PART <<<*/
-
+/*
 body section:nth-child(2){
   display: grid;
   grid-template-rows: auto;
@@ -166,3 +322,190 @@ container.container-section-02 p{
   font-size: 12px;
   margin-bottom: 20px;
 }
+/*
+@media screen and (max-width: 1300px){ 
+  body{
+    width: 100%;
+    height: 100%;
+    display: initial;
+  }
+
+  body > section:nth-child(1){
+    max-width: 1300px;
+    height: 50%;
+  }
+
+  container.container-section-01{
+    width: 100vw;
+    height: 50%;
+
+    margin: 0;
+    padding: 0;
+
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  container.container-section-01:nth-child(1){
+    padding-top: 50px;
+  }
+
+  container.container-section-01 div{    
+    position: initial;
+  }
+
+  container.container-section-01 div > h1{
+    font-size: 30px;
+  }
+
+  container.container-section-01 div > p{
+    font-size: 15px;
+  }
+
+  container.container-section-01:nth-child(2){
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "pa . pc"
+                          ". pb .";
+  }
+
+  container.container-section-01 > p{
+    max-width: 357px;
+    font-size: 14px;
+  }
+
+  container.container-section-01 > p:nth-child(1){
+    grid-area: pa;
+  }
+  
+  container.container-section-01 > p:nth-child(2){
+    grid-area: pb;
+  }
+  
+  container.container-section-01 > p:nth-child(3){
+    justify-self: flex-start;
+    grid-area: pc;
+  }
+}*/
+
+@media screen and (max-width: 1100px){
+
+  body{
+    height: auto;
+  }
+
+  body > section:nth-child(1){
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  body > section:nth-child(2){
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section:nth-child(2) container{
+    margin: 10px 0;
+  }
+
+  .cs12{
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cs12 > div{
+    margin: 0 !important;
+  }
+
+  section > container.cs2{
+    max-width: none;
+    width: 420px;
+  }
+
+}
+
+
+
+/*
+@media  screen and (max-width: 1000px) {
+
+  container.container-section-01:nth-child(2) > p{
+    width: 357px;
+    margin: 5px;
+    font-size: 12px;
+  }
+
+  body section:nth-child(2){
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+
+    background-color: aqua;
+  }
+
+  body > section:nth-child(2) > container.container-section-02{
+    width: 60% ;
+    max-width: none;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+
+  .attribution{
+    margin-top: 150px;
+  }
+}
+
+@media screen and (max-width: 665px){
+  body{
+    width: 100%;
+  }
+
+  section > container.container-section-01{
+    min-width: 0;
+  }
+
+  section > container.container-section-01 > div{
+    min-width: 400px;
+    text-align: center;
+  }
+
+  container.container-section-02{
+    min-width: 390px;
+  }
+}
+
+@media screen and (max-width: 380px){
+  body > section{
+    height: 2000% !important;
+  }
+
+  container.container-section-01:nth-child(1){
+    height: 5%;
+    margin: 0;
+  }
+
+  section > container.container-section-01:nth-child(1) > div{
+    min-width: 0;
+    width: 100%;
+  }
+
+  section > container.container-section-01 > div > h1{   
+    width: 250px;
+    font-size: 30px;
+    margin: 0 auto;
+  }
+
+  section > container.container-section-01 > div > p{
+    width: 300px;
+    font-size: 12px;
+    margin: 0 auto !important;
+  }
+}*/
